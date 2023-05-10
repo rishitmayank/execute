@@ -1,0 +1,11 @@
+import os,time 
+
+try:
+    f = open("high score", "r")
+    scores = f.read().split()
+    f.close()
+    print(scores)
+except FileNotFoundError:
+    print("The 'high score' file does not exist in the current directory.")
+except PermissionError:
+    print("You don't have read permissions for the 'high score' file.")
